@@ -45,16 +45,16 @@ int main() {
     Vec3f origin = {0, 0, 0};
     Vec3f lookAt = {0, 0, -1};
     Vec3f up = {0, 1, 0};
-    float fov = 90.0f;
+    float fov = 90.0f; // 90.0f
     float ar = (float)SCR_WIDTH / (float)SCR_HEIGHT;
-    float scale = tanf((fov * 0.5f) * LAMATH_PI / 180.0f);
+    float scale = tanf((fov * 0.3f) * LAMATH_PI / 180.0f);
 
     Vec3f forward = vec3f_normalize(vec3f_sub(lookAt, origin));
     Vec3f right = vec3f_normalize(vec3f_cross(forward, up));
     Vec3f nup = vec3f_cross(right, forward);
 
     Sphere sphere = {{0, 0, -5}, 1};
-    Vec3f light = {5, 5, -10};
+    Vec3f light = {55, 15, -10};
 
     for (int y = 0; y < SCR_HEIGHT; y++) {
         for (int x = 0; x < SCR_WIDTH; x++) {
