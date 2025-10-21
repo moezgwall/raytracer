@@ -45,7 +45,7 @@ int main() {
     // render to the screen
     for (int y = 0; y < SCR_HEIGHT; y++) {
         for (int x = 0; x < SCR_WIDTH; x++) {
-            Ray ray = generateRay((float)x, (float)y, SCR_WIDTH, SCR_HEIGHT, cam);
+            Ray ray = generateRay(x,y, SCR_WIDTH, SCR_HEIGHT, cam);
             float closestT = INFINITY;
             Hittable *hitObject = NULL;
             Vec3f hitPoint, normal;
